@@ -2,8 +2,12 @@ import Head from "next/head";
 import styles from "./Layout.module.css";
 
 import Header from "../header/Header";
+import Footer from "@components/footer/Footer";
+import { useRouter } from "next/router";
 
 export default function Layout({ children }) {
+  const router = useRouter();
+console.log(router);
   return (
     <>
       <Head>
@@ -16,6 +20,7 @@ export default function Layout({ children }) {
       <main className={styles.main}>
         <Header />
         {children}
+        {(router.pathname === '/about') ? <Footer /> :''}
       </main>
     </>
   );

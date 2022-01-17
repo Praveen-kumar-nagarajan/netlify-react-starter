@@ -1,0 +1,18 @@
+.skill_wrapper {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+i.devicon {
+  font-size: 4rem;
+  color: #80c7ff;
+}
+
+.skill_label {
+  position: absolute;
+  bottom: -27px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+}

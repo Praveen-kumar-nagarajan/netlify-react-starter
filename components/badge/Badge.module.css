@@ -1,0 +1,11 @@
+.badge {
+  align-items: center !important;
+  background-color: #ddeffd;
+  border-radius: 3px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  font-family: Montserrat !important;
+  font-weight: bold !important;
+  margin: 0 0.2rem !important;
+  padding: 4px 8px !important;
+}
