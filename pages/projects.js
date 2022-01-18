@@ -4,6 +4,7 @@ import timelineAmicoPic from "../public/images/Timeline-amico.svg";
 
 import Layout from "@components/layout/Layout";
 import ProjectCard from "@components/project-card/ProjectsCard";
+import { Col, Container, Row } from "react-bootstrap";
 
 export default function Projects() {
   const projects = [
@@ -97,20 +98,28 @@ export default function Projects() {
   ];
 
   return (
-    <div className="project-container">
-      <div className="img-container">
-        <Image src={typingPic} alt="typingPic" />
-        <Image src={timelineAmicoPic} alt="timelineAmico" />
-      </div>
-      <div className="project-content">
-        <div className="projects">
-          <div className="timeline">
-            {projects.map(function (project) {
-              return <ProjectCard project={project} />;
-            })}
-          </div>
-        </div>
-      </div>
+    <div className="prjct-container">
+      <Container className="prjct-wrapper">
+        <Row className="prjct-row">
+          <Col lg="4" md="4" s="12" xs="12">
+            <div className="img-container">
+              <Image src={typingPic} alt="typingPic" />
+              <Image src={timelineAmicoPic} alt="timelineAmico" />
+            </div>
+          </Col>
+          <Col lg="8" md="8" s="12" xs="12">
+            <div className="project-content">
+              <div className="projects">
+                <div className="timeline">
+                  {projects.map(function (project) {
+                    return <ProjectCard project={project} />;
+                  })}
+                </div>
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

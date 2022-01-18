@@ -28,13 +28,6 @@ main {
   position: relative;
 }
 
-/* code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
-} */
-
 ul {
   margin: 0;
 }
@@ -68,6 +61,7 @@ a.owner {
   left: 0;
   right: 0;
   width: 100%;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -95,7 +89,6 @@ a.owner {
 }
 
 .header ul.nav_list li.nav_link:hover {
-  /* border-bottom: 3px solid #E2DDCA; */
   background-size: 100% 88%;
   cursor: pointer;
   border-bottom: 3px solid #f8cd5f;
@@ -139,23 +132,12 @@ a.owner {
 /* Skills component styles */
 
 .about-container,
-.project-container,
 .skills-container {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
   height: 100%;
-}
-
-.project-container .img-container {
-  width: 35%;
-  height: 99%;
-  padding: 3rem 1rem;
-}
-
-.project-container .img-container span img {
-  margin: 2rem 0 !important;
 }
 
 .about-container .img-container,
@@ -166,17 +148,18 @@ a.owner {
 }
 
 .skills-container .img-container {
-  display: flex;
   align-items: center;
+  display: flex;
+  height: 100%;
   justify-content: center;
+  width: 100%;
 }
 
 .about-container .about-content {
   flex: 1;
 }
 
-.skills-container .skills-content,
-.project-container .project-content {
+.skills-container .skills-content {
   width: 70%;
   padding: 1rem;
 }
@@ -204,11 +187,6 @@ a.owner {
 }
 
 /* projects style */
-/*
-.container {
-  max-width: 650px;
-  margin: 50px auto;
-} */
 
 p {
   font-weight: 300;
@@ -421,6 +399,7 @@ p {
 }
 
 /* CSS button */
+
 .button-30 {
   align-items: center;
   appearance: none;
@@ -492,7 +471,6 @@ footer {
   color: #000000;
   text-align: center;
   font-family: Montserrat;
-  /* background-color: #80c7ff; */
   background-color: #f8cd5f;
   border-radius: 0.25rem;
 }
@@ -511,4 +489,60 @@ footer {
 
 .bs-tooltip-bottom .tooltip-arrow::before {
   border-bottom-color: #f8cd5f;
+}
+
+/* media query */
+/* default styles here for older browsers.
+   I tend to go for a 600px - 960px width max but using percentages */
+@media only screen and (min-width: 960px) {
+  /* styles for browsers larger than 960px; */
+}
+
+@media only screen and (min-width: 1440px) {
+  /* styles for browsers larger than 1440px; */
+}
+
+@media only screen and (min-width: 2000px) {
+  /* for sumo sized (mac) screens */
+}
+
+@media only screen and (max-device-width: 480px) {
+  /* styles for mobile browsers smaller than 480px; (iPhone) */
+}
+
+@media only screen and (device-width: 768px) {
+  /* default iPad screens */
+}
+
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* For landscape layouts only */
+}
+
+.skills-container,
+.prjct-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.skills-wrapper,
+.prjct-wrapper {
+  margin: 0;
+  max-width: 100%;
+  padding: 1rem 3rem;
+}
+
+.skills-row div .img-container,
+.prjct-row div .img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
