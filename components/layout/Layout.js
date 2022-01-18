@@ -17,8 +17,8 @@ export default function Layout({ children }) {
           rel="stylesheet"
         ></link>
       </Head>
+      <Header />
       <main className={styles.main}>
-        <Header />
         {children}
       </main>
       <Footer />
