@@ -4,12 +4,12 @@ import codingProg from "../public/images/coding_prog.svg";
 import Layout from "@components/layout/Layout";
 import SkillImage from "@components/skill-image/SkillImage";
 
-export default function Skills() {
+export default function Skills(props) {
   return (
     <div className="skills-container">
       <div className="skills-content">
         <div className="skills-list">
-          <SkillImage label="Angulae 10" icon="devicon-angularjs-plain" />
+          <SkillImage label="Angular 10" icon="devicon-angularjs-plain" />
           <SkillImage label="TypeScript" icon="devicon-typescript-plain" />
           <SkillImage label="JavaScript" icon="devicon-javascript-plain" />
           <SkillImage label="HTML5" icon="devicon-html5-plain" />

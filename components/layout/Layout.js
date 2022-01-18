@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 
 export default function Layout({ children }) {
   const router = useRouter();
-console.log(router);
+
   return (
     <>
       <Head>
@@ -20,8 +20,8 @@ console.log(router);
       <main className={styles.main}>
         <Header />
         {children}
-        {(router.pathname === '/about') ? <Footer /> :''}
       </main>
+      <Footer />
     </>
   );
 }

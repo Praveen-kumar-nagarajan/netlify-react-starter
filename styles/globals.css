@@ -1,48 +1,47 @@
 @import url("https://use.fontawesome.com/releases/v5.3.1/css/all.css");
 @import url("https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css");
+@import url("bootstrap/dist/css/bootstrap.min.css");
 
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: Montserrat, Alice, Roboto, Space Grotesk, sans-serif;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
   font-size: 1rem;
   color: #000000;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 main {
-  padding: 5rem 0;
-  flex: 1;
+  align-items: center;
+  background-color: #f9f8f4 !important;
   display: flex;
   flex-direction: column;
+  flex: 1;
+  height: calc(100vh - 55px) !important;
   justify-content: center;
-  align-items: center;
-  height: 100vh !important;
-  background-color: #f9f8f4 !important;
-  padding: 60px 0 0 !important;
   margin: 0 !important;
+  overflow: auto;
+  padding: 5rem 0;
+  padding: 60px 0 0 !important;
   position: relative;
 }
 
-code {
+/* code {
   background: #fafafa;
   border-radius: 5px;
   padding: 0.75rem;
   font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
+} */
+
+ul {
+  margin: 0;
 }
 
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+a:hover,
+a {
+  color: #191a1a;
 }
 
 .custom_404 span > img.custom_404_image {
@@ -57,6 +56,12 @@ code {
 
 /* Header component styles */
 
+a.owner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -66,7 +71,7 @@ code {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 3rem;
+  padding: 0.7rem 3rem;
   z-index: 2;
   background-color: #f9f8f4;
   transition: background-color 150ms linear;
@@ -81,6 +86,7 @@ code {
   display: flex;
   column-gap: 2rem;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .header ul.nav_list li.nav_link.active {
@@ -159,6 +165,12 @@ code {
   padding: 3rem 1rem;
 }
 
+.skills-container .img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .about-container .about-content {
   flex: 1;
 }
@@ -192,11 +204,11 @@ code {
 }
 
 /* projects style */
-
+/*
 .container {
   max-width: 650px;
   margin: 50px auto;
-}
+} */
 
 p {
   font-weight: 300;
@@ -209,7 +221,7 @@ p {
   position: relative;
   padding-left: 4rem;
   margin: 0 0 0 30px;
-  color: white;
+  color: #000000;
 }
 
 .timeline:before {
@@ -273,17 +285,19 @@ p {
 
 .timeline .timeline-container .timeline-body .timeline-title {
   margin-bottom: 1.4rem;
+  font-size: 1rem;
 }
 
 .timeline .timeline-container .timeline-body .timeline-footer {
-  margin: 1.4rem 0;
-  font-size: 12px !important;
+  align-items: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
-  align-items: center;
+  font-size: 12px !important;
+  font-weight: bold;
   justify-content: flex-start;
+  margin: 1.4rem 0;
+  width: 100%;
 }
 
 .timeline .timeline-container .timeline-body .timeline-footer .badge,
@@ -295,6 +309,7 @@ p {
   font-weight: bold;
   font-family: Montserrat;
   margin: 0 0.2rem;
+  color: #000000;
 }
 
 .timeline .timeline-container .timeline-body .timeline-title .badge {
@@ -462,4 +477,38 @@ p {
 footer {
   width: 100%;
   padding: 0 2rem;
+  background-color: #f9f8f4 !important;
+}
+
+/* bs-tooltip */
+
+.tooltip.show {
+  opacity: 1;
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 0.25rem 0.5rem;
+  color: #000000;
+  text-align: center;
+  font-family: Montserrat;
+  /* background-color: #80c7ff; */
+  background-color: #f8cd5f;
+  border-radius: 0.25rem;
+}
+
+.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: #f8cd5f;
+}
+
+.bs-tooltip-right .tooltip-arrow::before {
+  border-right-color: #f8cd5f;
+}
+
+.bs-tooltip-left .tooltip-arrow::before {
+  border-left-color: #f8cd5f;
+}
+
+.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: #f8cd5f;
 }
