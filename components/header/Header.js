@@ -14,7 +14,12 @@ export default function Header(props) {
   ];
 
   return (
-    <Navbar bg="light" expand="lg" className="header">
+    <Navbar
+      bg="light"
+      expand="lg"
+      className="header"
+      style={{ backgroundColor: "#f9f8f4 !important" }}
+    >
       <Container fluid>
         <Navbar.Brand href="/about" className="owner">
           {name}
