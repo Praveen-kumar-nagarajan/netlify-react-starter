@@ -111,8 +111,8 @@ export default function Projects() {
             <div className="project-content">
               <div className="projects">
                 <div className="timeline">
-                  {projects.map(function (project) {
-                    return <ProjectCard project={project} />;
+                  {projects.map(function (project, index) {
+                    return <ProjectCard key={index} project={project} />;
                   })}
                 </div>
               </div>

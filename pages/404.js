@@ -1,12 +1,11 @@
 import Image from "next/image";
-
 import Layout from "@components/layout/Layout";
 
 export default function Custom404() {
   return (
     <div className="custom_404">
       <Image
-        src="/images/404-error.svg"
+        src="/images/under-construction-amico.svg"
         layout="fill"
         alt="custom_404"
         className="custom_404_image"

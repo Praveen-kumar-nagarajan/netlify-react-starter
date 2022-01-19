@@ -25,10 +25,8 @@ export default function Skills(props) {
               <SkillImage label="Java" icon="devicon-java-plain" />
               <SkillImage label="ReactJS" icon="devicon-react-original" />
               <SkillImage label="Jira" icon="devicon-jira-plain" />
-              <SkillImage
-                label="Sourcetree"
-                icon="devicon-sourcetree-original"
-              />
+              <SkillImage label="Sourcetree"
+                          icon="devicon-sourcetree-original" />
               <SkillImage label="VsCode" icon="devicon-vscode-plain" />
             </div>
           </Col>

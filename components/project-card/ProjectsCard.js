@@ -2,15 +2,11 @@ import Badge from "@components/badge/Badge";
 
 export default function ProjectCard({ project }) {
   return (
-    <div
-      className={`timeline-container ${project.status?.toLocaleLowerCase()}`}
-      key={project.title}
-    >
+    <div className={`timeline-container ${project.status?.toLocaleLowerCase()}`}
+         key={project.title}>
       <div className="timeline-icon">
-        <i
-          className={`far fa-grin-wink ${project.status?.toLocaleLowerCase()}`}
-          style={{ fontSize: "2rem" }}
-        ></i>
+        <i className={`far fa-grin-wink ${project.status?.toLocaleLowerCase()}`}
+           style={{ fontSize: "2rem" }}></i>
       </div>
       <div className="timeline-body">
         <h4 className="timeline-title">
